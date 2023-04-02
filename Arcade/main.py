@@ -2,9 +2,7 @@ from random import randint
 from pygame import *
 init()
 
-C_WHITE = (255, 255, 255)
-C_RED = (255, 0, 0)
-C_GREEN = (0, 255, 0)
+White = (255,255,255)
 C_BLACK = (0, 0, 0)
 C_FLOOR = (12, 17, 34)
 C_WALLS = (86, 4, 1)
@@ -135,7 +133,7 @@ class Hero(sprite.Sprite):
                 self.image = (hero_images_pistol if self.gun == 'pistol' else hero_images_shotgun)[2]
             else:
                 self.image = transform.flip((hero_images_pistol if self.gun == 'pistol' else hero_images_shotgun)[2], True, False)
-
+ssss
         self.rect.x += self.x_speed
         # если зашли за стенку, то встанем вплотную к стене
         platforms_touched = sprite.spritecollide(self, barriers, False)
@@ -182,7 +180,7 @@ class Enemy(sprite.Sprite):
         self.rect.x = args['x']
         self.rect.y = args['y']
         self.add(enemies, all_sprites)
-    
+    sdgsd
     def update(self):
         self.rect.x += randint(-5, 5)
 
